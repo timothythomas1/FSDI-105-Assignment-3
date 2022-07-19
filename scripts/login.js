@@ -35,6 +35,16 @@ function login(){
 }
 
 function init(){
+    $("#loginForm").hide();
+
+    // hook events 
+    $("#hideForm").on("click", function(){
+        $("#loginForm").slideUp(200); //millisec
+    }); //millisec
+    // show the userForm
+    $("#newUser").on("click", function(){
+        $("#loginForm").slideDown(200); //millisec
+    });
     $("#loginBtn").click(login);
 }
 
