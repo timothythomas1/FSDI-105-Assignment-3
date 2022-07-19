@@ -17,7 +17,7 @@
             <a class="navbar-brand" href="./user.html"><i class="fa-solid fa-user-astronaut"></i>    Users</a>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-warning" type="submit">Search</button>
             </form>
         </div>
     </nav>
@@ -25,12 +25,42 @@
         <p class="display-1" >Welcome Home, Oh Sentient One</p>
     </header>
     <div class="bg-container" id="home">
-        <main >
+        <main>
+            <div class="btn-lg">
+                <button id="newUser"
+                class="btn btn-warning" type="button">Log In    <i class="fa-solid fa-chevron-down fa-2xl"></i></button>
+            </div>
+            
+            <form action="" id="forReset">
+                
+                <div class="form-container"  id="userForm">
+                    <!-- name, lastname, email, password, password confirmation, color, payment method-->
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default ">Email</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                        id="textEmailLogin">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default ">Password</span>
+                        <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                        id="textPasswordLogin">
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button id="loginBtn" class="btn btn-primary" type="button">    <i class="fa-solid fa-right-to-bracket fa-2xl"></i></button>
+                        <button id="hideForm" class="btn btn-warning" type="button" ><i class="fa-solid fa-chevron-up fa-2xl"></i></button>
+                    </div>
+                </div>
+            </form>
         </main>
+        <h1 class="d-none" id="alertError" >Invalid Credentials! Please try again.</h1>
+
         <!-- <footer>
             <p class="" >All rights reserved</p>
         </footer> -->
     </div>
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/storeManager.js"></script>
+    <script src="./scripts/login.js"></script>
 </body>
 </html>

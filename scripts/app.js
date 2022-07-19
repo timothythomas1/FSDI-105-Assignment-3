@@ -108,6 +108,33 @@ function isValid(aUsers){
     }
     return valid
 }
+function validatePassword(){
+    console.log("Validating Password");
+    let txtPass = $("#textPassword");
+    let password = txtPass.val();
+
+    if (password.length < 8) {
+        txtPass.css("background-color", "red"); //jQuery call for CSS 
+    }
+    else{
+        txtPass.css("background-color", "white"); //jQuery call for CSS 
+    }
+}
+function confirmPassword(){
+    console.log("Confirming Password");
+    let txtPass = $("#textPassword");
+    let password = txtPass.val();
+
+    let txtPassConf = $("#confirmPassword");
+    let confirmPassword = txtPassConf.val();
+     
+    if (confirmPassword !== password) {
+        txtPassConf.css("background-color", "red"); //jQuery call for CSS 
+    }
+    else{
+        txtPassConf.css("background-color", "white"); //jQuery call for CSS 
+    }
+}
 
 function clearInputs(){
     $(forReset)[0].reset()
@@ -154,9 +181,10 @@ function init(){
     $("#newUser").on("click", function(){
         $("#userForm").slideDown(400); //millisec
     });
-
+    // validate password 
+    $("#textPassword").keyup(validatePassword);
+    $("#confirmPassword").keyup(confirmPassword);
 }
-
 window.onload = init;
 
 

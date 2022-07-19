@@ -99,3 +99,19 @@ tr{
     text-align: center;
 }
 
+/* This code removes bottom border line */
+tr:last-child td {
+    border-bottom: none;
+}
+
+#alertError{
+    color: red;
+    text-align: center;
+    background-color: #212529;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+margin-top: 15%;
+}
